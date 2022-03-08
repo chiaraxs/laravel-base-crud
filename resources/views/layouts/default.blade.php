@@ -14,7 +14,7 @@
 
 <body>
     
-    ciaociaoprovaciao
+   
 
     {{-- segnaposto views/comics/index.blade.php --}}
     @yield('content')

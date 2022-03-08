@@ -9,7 +9,6 @@
 
 @section('content')
 
-<h3>Comics</h3>
 
 <table>
     <thead>
@@ -26,13 +25,12 @@
         @foreach($data as $comic)
             <tr>
                 
-                <td>{{$comic['title']}}</td>
-                <td>{{$comic->['thumb']}}</td>
-                <td>{{$comic->['price']}}</td>
-                <td>{{$comic->['series']}}</td>
-                <td>{{$comic->['description']}}</td>
-                <td>{{$comic->['sale_date']}}</td>
-                
+                <td>{{$comic->title}}</td>
+                <td>{{$comic->price}}</td>
+                <td>{{$comic->series}}</td>
+                <td>{{$comic->description}}</td>
+                <td>{{$comic->sale_date}}</td>
+
             </tr>
         @endforeach
 
@@ -43,5 +41,6 @@
 
 
 
-    
+    {{-- http://127.0.0.1:8000/comics --}}
+
 

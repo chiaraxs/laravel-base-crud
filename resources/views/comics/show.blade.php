@@ -11,17 +11,26 @@
 
 <h3>Comics</h3>
 
+    <ul>
+        <li>
+            <h2>Title: {{$comic->title}}</h2>
+        </li>
+        <li>
+            <h2>Price: {{$comic->price}}</h2>
+        </li>
+        <li>
+            <h2>Description: {{$comic->description}}</h2>
+        </li>
+        <li>
+           <h2>Sale Date: {{$comic->sale_date}}</h2>
+        </li>
+        <li>
+            <h2>Series: {{$comic->series}}</h2>
+        </li>
 
-
-
-    <h6>Title:{{$comic['title']}}</h6>
-    <h6>Price: {{$comic->['price']}}</h6>
-    <h6>Series: {{$comic->['series']}}</h6>
-    <h6>Description: {{$comic->['description']}}</h6>
-    <h6>Sale Date:{{$comic->['sale_date']}}</h6>
-
-
-
+    </ul>
 
 @endsection
 
+
+{{-- http://127.0.0.1:8000/comics/2 --}}
