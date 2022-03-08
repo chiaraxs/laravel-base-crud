@@ -19,6 +19,9 @@
             <h2>Price: {{$comic->price}}</h2>
         </li>
         <li>
+            <h2>Price: {{$comic->thumb}}</h2>
+        </li>
+        <li>
             <h2>Description: {{$comic->description}}</h2>
         </li>
         <li>

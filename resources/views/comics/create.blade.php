@@ -18,6 +18,12 @@
         </div>
 
         <div>
+            <label for="title">Thumb</label>
+            <input type="text" name="thumb" placeholder="Insert Thumb">
+        </div>
+
+
+        <div>
             <label for="price">Price</label>
             <input type="text" name="price" placeholder="Insert Price">
         </div>
