@@ -2,7 +2,3 @@
 @extends('layouts.default')
 {{-- /estensione del layout di default --}}
 
-
-{{-- head title in layouts->default --}}
-@section('pageTitle', 'Home')
-{{-- /head title in layouts->default --}}

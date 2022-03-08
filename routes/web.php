@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\BranchController;
+
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// home route
+Route::get('/', function () {
+    return view('home');
+});
+// /home route
+
+// crud
 Route::resource('comics', 'ComicController');
+// /crud

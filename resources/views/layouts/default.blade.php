@@ -13,7 +13,14 @@
 </head>
 
 <body>
+    
+    ciaociaoprovaciao
 
+    {{-- segnaposto views/comics/index.blade.php --}}
+    @yield('content')
+    {{-- /segnaposto views/comics/index.blade.php --}}
+
+        
 
 </body>
 </html>
