@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BranchController extends Controller
+class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.
