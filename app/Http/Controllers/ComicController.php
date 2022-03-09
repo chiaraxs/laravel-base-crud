@@ -40,16 +40,17 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
+       
 
         $newComic = new Comic();
-
-        $newComic->title = $data['title'];
-        $newComic->price = $data['price'];
-        $newComic->description = $data['description'];
-        $newComic->thumb = $data['thumb'];
-        $newComic->series = $data['series'];
-        $newComic->sale_date = $data['sale_date'];
+        $newComic->fill($request->all());
+        
+        // $newComic->title = $data['title'];
+        // $newComic->price = $data['price'];
+        // $newComic->description = $data['description'];
+        // $newComic->thumb = $data['thumb'];
+        // $newComic->series = $data['series'];
+        // $newComic->sale_date = $data['sale_date'];
         
         $newComic->save();
 
@@ -105,6 +106,8 @@ class ComicController extends Controller
     {
         $comic->delete();
 
-        return redirect()->route('comics.destroy');
+        return redirect()->route('comics.index');
+        // ritorna la view della mia home comics
+        
     }
 }
