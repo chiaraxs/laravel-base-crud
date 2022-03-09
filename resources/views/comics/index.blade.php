@@ -34,11 +34,23 @@
                     <td>{{$comic->series}}</td>
                     <td>{{$comic->description}}</td>
                     <td>{{$comic->sale_date}}</td>
+
+                    {{-- rotte che rimandano rispettivamente ad edit e create --}}
+                    <td>
+                        <a href="{{ route ('comics.edit', $comic->id)}}" class="btn btn-info my-2">Edit Comic</a>
+                        <a href="{{ route ('comics.create', $comic->id)}}" class="btn btn-info">Create Comic</a>
+                    </td>
+                    {{-- rotte che rimandano rispettivamente ad edit e create --}}
+
                 </tr>
             @endforeach
             {{-- foreach --}}
         </tbody>
     </table>
+
+   
+
+
     
 @endsection
 
