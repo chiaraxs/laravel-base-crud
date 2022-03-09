@@ -11,29 +11,15 @@
 
 <h3>Comics</h3>
 
-    <ul>
-        <li>
-            <h2>Title: {{$comic->title}}</h2>
-        </li>
-        <li>
-            <h2>Price: {{$comic->price}}</h2>
-        </li>
-        <li>
-            <h2>Price: {{$comic->thumb}}</h2>
-        </li>
-        <li>
-            <h2>Description: {{$comic->description}}</h2>
-        </li>
-        <li>
-           <h2>Sale Date: {{$comic->sale_date}}</h2>
-        </li>
-        <li>
-            <h2>Series: {{$comic->series}}</h2>
-        </li>
+    <h1>{{$comic->title}}</h1>
+    <h2>Price: {{$comic->price}}</h2>
+    <p>Description: {{$comic->description}}</p>
+    <h2>Sale Date: {{$comic->sale_date}}</h2>
+    <h2>Series: {{$comic->series}}</h2>
+    <img src="{{$comic->thumb}}" alt="">
 
-    </ul>
 
 @endsection
 
 
-{{-- http://127.0.0.1:8000/comics/2 --}}
+{{-- http://127.0.0.1:8000/comics/12 --}}

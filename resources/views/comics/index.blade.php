@@ -9,39 +9,40 @@
 
 @section('content')
 
-
-<table>
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Series</th>
-            <th>Description</th>
-            <th>Sale Date</th>
-        </tr>
-    </thead>
-    <tbody>
-        
-        @foreach($data as $comic)
+    <table class="table">
+        <thead>
             <tr>
-                
-                <td>{{$comic->title}}</td>
-                <td>{{$comic->thumb}}</td>
-                <td>{{$comic->price}}</td>
-                <td>{{$comic->series}}</td>
-                <td>{{$comic->description}}</td>
-                <td>{{$comic->sale_date}}</td>
-
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Thumb</th>
+                <th scope="col">Price</th>
+                <th scope="col">Series</th>
+                <th scope="col">Description</th>
+                <th scope="col">Sale Date</th>
             </tr>
-        @endforeach
+        </thead>
+        <tbody>
 
-    </tbody>
-</table>
+            {{-- foreach --}}
+            @foreach($data as $comic)
+                <tr>
+                    <th scope="row">{{$comic->id}}</th>
+
+                    <td>{{$comic->title}}</td>
+                    <td>{{$comic->thumb}}</td>
+                    <td>{{$comic->price}}</td>
+                    <td>{{$comic->series}}</td>
+                    <td>{{$comic->description}}</td>
+                    <td>{{$comic->sale_date}}</td>
+                </tr>
+            @endforeach
+            {{-- foreach --}}
+        </tbody>
+    </table>
+    
 @endsection
 
 
-
-
-    {{-- http://127.0.0.1:8000/comics --}}
+{{-- http://127.0.0.1:8000/comics --}}
 
 
