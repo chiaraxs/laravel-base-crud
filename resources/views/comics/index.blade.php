@@ -30,7 +30,7 @@
 
                     <td>{{$comic->title}}</td>
                     <td>{{$comic->thumb}}</td>
-                    <td>{{$comic->price}}</td>
+                    <td>{{$comic->price}} €</td>
                     <td>{{$comic->series}}</td>
                     <td>{{$comic->description}}</td>
                     <td>{{$comic->sale_date}}</td>
