@@ -40,6 +40,19 @@
                         <a href="{{ route ('comics.edit', $comic->id)}}" class="btn btn-info my-2">Edit Comic</a>
                     </td>
                     {{-- rotta che rimanda a edit.blade.php --}}
+
+                    {{-- rotta che rimanda a comics.destroy --}}
+                    <td>
+                        <form action="{{ route('comics.destroy', $comic->id)}}" method="post">
+                        @csrf
+
+                        @method('delete')
+                        
+                        <input type="submit" value="Delete" class="btn btn-danger my-2" >
+                    </td>
+                    {{-- rotta che rimanda a comics.destroy --}}
+
+
                 </tr>
             @endforeach
             {{-- foreach --}}
