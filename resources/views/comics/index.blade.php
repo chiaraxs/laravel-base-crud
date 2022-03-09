@@ -35,21 +35,24 @@
                     <td>{{$comic->description}}</td>
                     <td>{{$comic->sale_date}}</td>
 
-                    {{-- rotte che rimandano rispettivamente ad edit e create --}}
+                    {{-- rotta che rimanda a edit.blade.php --}}
                     <td>
                         <a href="{{ route ('comics.edit', $comic->id)}}" class="btn btn-info my-2">Edit Comic</a>
-                        <a href="{{ route ('comics.create', $comic->id)}}" class="btn btn-info">Create Comic</a>
                     </td>
-                    {{-- rotte che rimandano rispettivamente ad edit e create --}}
-
+                    {{-- rotta che rimanda a edit.blade.php --}}
                 </tr>
             @endforeach
             {{-- foreach --}}
         </tbody>
     </table>
 
-   
+    <div class="container d-flex justify-content-center">
+        
+        {{-- rotta che rimanda a create.blade.php --}}
+        <a href="{{ route ('comics.create', $comic->id)}}" class="btn btn-info">Create Comic</a>
+        {{-- /rotta che rimanda a create.blade.php --}}
 
+    </div>
 
     
 @endsection
