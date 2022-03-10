@@ -10,10 +10,21 @@
 {{-- al form passo la rotta di comics.store per salvare nl db i dati immessi tramite input text --}}
 {{-- il method post mi permette la creazione del nuovo comic --}}
 {{-- i methods put e patch, invece, aggiornano il form --}}
+{{-- validation -> se la validazione fallisce -> rimanda al form con gli errori da sistemare --}}
 @section('content')
 
 
     <div class="container d-flex justify-content-center mt-5">
+
+        @if($errors->any())
+            <div class='alert alert-danger me-2'>
+                <ul>
+                    @foreach ($errors->all() as $error )
+                        <li> {{$error}}</li>
+                    @endforeach
+                </ul>
+            </div>   
+        @endif
 
         <form action="{{ route ('comics.store') }}" method="post">
             @csrf
