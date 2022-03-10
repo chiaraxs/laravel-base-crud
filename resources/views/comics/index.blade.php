@@ -44,10 +44,11 @@
                     {{-- rotta che rimanda a comics.destroy --}}
                     <!-- Modal Bootstrap -->
                     <td>
-                    <!-- Button trigger modal -->
+                        <!-- Button trigger modal -->
                         <button type="button" class="btn btn-danger my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Delete Comic
                         </button>
+                        {{-- /Button trigger modal --}}
 
                         <form action="{{ route('comics.destroy', $comic->id)}}" method="post">
                         @csrf

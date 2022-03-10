@@ -14,7 +14,8 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    //  function index() -> legge i dati e li passa alla view
+    //  function index() -> legge i dati e li passa, ritornandoli, alla view comics.index
+    // passo a $data il model Comic
     public function index()
     {
         $data = Comic::all();
@@ -27,9 +28,10 @@ class ComicController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // la function create() ritorna la view di comcis.create con il form
     public function create()
     {
-        return view("comics.create");
+        return view('comics.create');
     }
 
     /**
@@ -40,11 +42,10 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-       
-
         $newComic = new Comic();
         $newComic->fill($request->all());
         
+        // alternativa senza fill 
         // $newComic->title = $data['title'];
         // $newComic->price = $data['price'];
         // $newComic->description = $data['description'];
@@ -65,7 +66,7 @@ class ComicController extends Controller
      */
     public function show($id)
     {
-        $comic = Comic::find($id);
+        $comic = Comic::find($id);  // alternativa al find -> findOrFail che rimanda un errore se non trova il dato
 
         return view('comics.show', compact('comic'));
     }
@@ -78,7 +79,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        return view("comics.edit", compact('comic'));
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -88,6 +89,7 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // l'update fa il fill e il save contemporaneamente
     public function update(Request $request, Comic $comic)
     {
         $data = $request->all();
@@ -102,6 +104,7 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // richiamo il dato che voglio eliminare ($comic), la funzione delete lo eliminerà, poi ritorno la view
     public function destroy(Comic $comic)
     {
         $comic->delete();

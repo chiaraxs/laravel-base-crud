@@ -4,9 +4,12 @@
 
 
 {{-- head title in layouts->default --}}
-@section('pageTitle', 'Crea Comic')
+@section('pageTitle', 'Create Comic')
 {{-- /head title in layouts->default --}}
 
+{{-- al form passo la rotta di comics.store per salvare nl db i dati immessi tramite input text --}}
+{{-- il method post mi permette la creazione del nuovo comic --}}
+{{-- i methods put e patch, invece, aggiornano il form --}}
 @section('content')
 
 

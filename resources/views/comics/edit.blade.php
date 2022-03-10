@@ -4,7 +4,7 @@
 
 
 {{-- head title in layouts->default --}}
-@section('pageTitle', 'Modifica Comic')
+@section('pageTitle', 'Edit Comic')
 {{-- /head title in layouts->default --}}
 
 @section('content')
@@ -61,3 +61,5 @@
     <div>
 
 @endsection
+
+{{-- http://127.0.0.1:8000/comics/41/edit --}}
